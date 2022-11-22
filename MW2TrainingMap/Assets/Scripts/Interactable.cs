@@ -8,7 +8,7 @@ public abstract class Interactable : MonoBehaviour
     public string messagePrompt;
 
 
-    //player calls this function
+    //allows player to define how they interact without messing with inner class
     public void baseInteract() {
         Interact();
     }
