@@ -33,5 +33,31 @@ public class bobbingScript : MonoBehaviour
             gunAnimation.SetTrigger("stop");
             gunAnimation.ResetTrigger("weaponBob");
         }
+
+        //if we're walking backward, we bob
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            gunAnimation.SetTrigger("weaponBob");
+            gunAnimation.ResetTrigger("stop");
+        }
+        //if we stop moving backward, no bobbing
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            gunAnimation.SetTrigger("stop");
+            gunAnimation.ResetTrigger("weaponBob");
+        }
+
+        //if we're walking backward, we bob
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            gunAnimation.SetTrigger("weaponBob");
+            gunAnimation.ResetTrigger("stop");
+        }
+        //if we stop moving backward, no bobbing
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            gunAnimation.SetTrigger("stop");
+            gunAnimation.ResetTrigger("weaponBob");
+        }
     }
 }
