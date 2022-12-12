@@ -7,9 +7,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.DA949528" = "player"
+	"last_search.DA949528" = "collider"
 	"OpenInspectorPreview.DA949528" = "0"
-	"currentGroup.DA949528" = "settings"
+	"currentGroup.DA949528" = "all"
 }
 providers = {
 	find = {
@@ -56,9 +56,10 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"c"
+	"co"
 	"lg"
 	"f"
-	"co"
 	"pa"
 	"te"
 	"pro"
