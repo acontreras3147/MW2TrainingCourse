@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyPad : Interactable
 {
+    public static bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,7 @@ public class KeyPad : Interactable
     protected override void Interact()
     {
         Debug.Log("Interacted with" + gameObject.name);
+        isActive = true;
+
     }
 }

@@ -25,14 +25,17 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
-        if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
+        if (KeyPad.isActive)
         {
-            //caps off our current time
-            currentTime = timerLimit;
-            timerText.color = Color.red;
-            enabled = false;
-            Invoke("endScene", 3);
+            currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
+            if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit)))
+            {
+                //caps off our current time
+                currentTime = timerLimit;
+                timerText.color = Color.red;
+                enabled = false;
+                Invoke("endScene", 3);
+            }
         }
         setTimerText();
 
