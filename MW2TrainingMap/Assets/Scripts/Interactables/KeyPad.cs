@@ -5,6 +5,12 @@ using UnityEngine;
 public class KeyPad : Interactable
 {
     public static bool isActive = false;
+    public static int pressCounter = 0;
+    public static AudioSource audiosrc;
+    private void Awake()
+    {
+        audiosrc = GetComponent<AudioSource>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +26,8 @@ public class KeyPad : Interactable
     //override interact with desired functionality of this object
     protected override void Interact()
     {
-        Debug.Log("Interacted with" + gameObject.name);
         isActive = true;
+        pressCounter++;
 
     }
 }

@@ -38,7 +38,14 @@ public class Timer : MonoBehaviour
             }
         }
         setTimerText();
+        if (KeyPad.pressCounter >= 2)
+        {
 
+            KeyPad.audiosrc.Play();
+            Invoke("endScene", 3);
+            KeyPad.pressCounter = 0;
+            KeyPad.isActive = false;
+        }
 
     }
     private void setTimerText()
