@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerMotor : MonoBehaviour
     private bool isGrounded;
     public float gravity = -9.8f;
     public float jumpHeight = 3f;
+    public TextMeshProUGUI enemiesLeft;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,7 @@ public class PlayerMotor : MonoBehaviour
     {
         //checking whether or not we are on the ground
         isGrounded = controller.isGrounded;
+        enemiesLeft.text = "Enemies Left: " + Enemy.numEnemies.ToString();
 
     }
 

@@ -6,10 +6,12 @@ public class KeyPad : Interactable
 {
     public static bool isActive = false;
     public static int pressCounter = 0;
-    public static AudioSource audiosrc;
+    public static AudioSource audioKeyPad;
+   
+    
     private void Awake()
     {
-        audiosrc = GetComponent<AudioSource>();
+        audioKeyPad = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()

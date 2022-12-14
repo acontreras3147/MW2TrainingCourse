@@ -40,8 +40,7 @@ public class Timer : MonoBehaviour
         setTimerText();
         if (KeyPad.pressCounter >= 2)
         {
-
-            KeyPad.audiosrc.Play();
+            timerText.color = Color.green;
             Invoke("endScene", 3);
             KeyPad.pressCounter = 0;
             KeyPad.isActive = false;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class bobbingScript : MonoBehaviour
 {
     public Animator gunAnimation;
+    
 
     private void Update()
     {
